@@ -30,8 +30,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: 🔨 Build et tests Maven
-        run: mvn clean verify
+      - name: Build du back-end
+        working-directory: back
+        run: mvn -B clean verify
 
       - name: Génération du rapport JaCoCo
         run: mvn jacoco:report
