@@ -27,6 +27,7 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [
         { type: 'html' },
+        { type: 'lcovonly' },
         { type: 'text-summary' }
       ]
     },
@@ -35,7 +36,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false, // désactivé pour CI
-    browsers: ['ChromeHeadlessNoSandbox'], // 👈 utilisation du mode headless
+    browsers: ['ChromeHeadlessNoSandbox'], // utilisation du mode headless
     singleRun: true, // exécution unique pour CI
     restartOnFileChange: false,
 
