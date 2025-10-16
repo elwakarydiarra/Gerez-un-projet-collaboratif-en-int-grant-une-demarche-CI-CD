@@ -17,7 +17,7 @@ jobs:
       - name: Checkout du code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # important pour l'analyse complète
+          fetch-depth: 0
 
       - name: Setup JDK 11
         uses: actions/setup-java@v4
