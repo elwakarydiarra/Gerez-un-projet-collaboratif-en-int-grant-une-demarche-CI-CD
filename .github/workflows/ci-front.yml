@@ -6,7 +6,7 @@ on:
       - main
       - 2025.9
   pull_request:
-  branches:
+    branches:
       - main
       - 2025.9
 
