@@ -42,7 +42,7 @@ jobs:
           name: angular-coverage
           path: front/coverage/
       - name: SonarCloud Scan 
-        uses: sonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarcloud-github-action@master
         with:
           args:
             -Dproject.settings=front/sonar-project.properties
