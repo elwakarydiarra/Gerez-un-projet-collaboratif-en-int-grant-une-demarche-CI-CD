@@ -47,9 +47,8 @@ jobs:
         with:
           args: >
             -Dproject.settings=back/sonar-project.properties
-            -Dsonar.branch.name=master
             -Dsonar.projectBaseDir=back
+            -Dsonar.branch.name=master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_BACK }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
