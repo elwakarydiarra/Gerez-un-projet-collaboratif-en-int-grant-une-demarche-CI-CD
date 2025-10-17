@@ -41,10 +41,8 @@ jobs:
           path: front/coverage/bobapp/
 
       - name: Analyse SonarCloud
-        working-directory: front 
-        uses: SonarSource/sonarcloud-github-action@master
-        with:
-          args: >
-            -Dproject.settings=sonar-project.properties
+        run: |
+          cd front
+          sonar-scanner -Dproject.settings=sonar-project.properties
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_FRONT }}
