@@ -40,6 +40,10 @@ jobs:
           name: angular-coverage
           path: front/coverage/bobapp/
 
+      - name: Install SonarScanner CLI
+        run: |
+          npm install -g sonar-scanner
+
       - name: Analyse SonarCloud
         run: |
           cd front
