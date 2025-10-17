@@ -45,6 +45,6 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         with:
           args:
-            -Dproject.settings=front/sonar-project.properties
+            -Dproject.settings=sonar-project.properties
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_FRONT }}
