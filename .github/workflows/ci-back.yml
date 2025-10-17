@@ -30,8 +30,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build du back-end
-        working-directory: back
+      - name: Build du back-end et exécution des tests
         run: mvn -B clean verify
 
       - name: Génération du rapport JaCoCo
@@ -42,11 +41,12 @@ jobs:
         with:
           name: jacoco-report
           path: back/target/site/jacoco/
-      - name: SonarCloud Scan 
+
+      - name: Analyse SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
         with:
-          args:
+          args: >
             -Dproject.settings=back/sonar-project.properties
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_BACK }}
-          
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
