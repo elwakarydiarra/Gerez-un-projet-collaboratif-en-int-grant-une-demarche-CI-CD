@@ -41,7 +41,7 @@ jobs:
           path: front/coverage/bobapp/
 
       - name: Analyse SonarCloud
-        working-directory: front  
+        working-directory: front
         uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_FRONT }}
