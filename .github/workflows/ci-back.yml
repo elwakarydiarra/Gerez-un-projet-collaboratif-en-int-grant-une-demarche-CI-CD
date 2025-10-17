@@ -48,4 +48,5 @@ jobs:
           args:
             -Dproject.settings=back/sonar-project.properties
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_BACK }}
+          SONAR_TOKEN: ${{ secrets.SONAR_BACK }}
+          
