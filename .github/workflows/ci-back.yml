@@ -43,7 +43,7 @@ jobs:
           name: jacoco-report
           path: back/target/site/jacoco/
       - name: SonarCloud Scan 
-        uses: sonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarcloud-github-action@master
         with:
           args:
             -Dproject.settings=back/sonar-project.properties
